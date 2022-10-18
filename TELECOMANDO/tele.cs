@@ -6,20 +6,23 @@ using System.Threading.Tasks;
 
 namespace TELECOMANDO
 {
-    internal class tele
+    public class tele
     {
         private string produttori = "";
         private string modello = "";
         private string operationMode = "";
-        private bool stato;
         private int canale;
-        private int volume;
+        private Television TV;
 
-        public tele(string p, string m, string oM)
+        public tele(string p, string m, string oM,Television T)
         {
             produttori = p;
             modello = m;
             operationMode = oM;
+        }
+        public tele( Television T)
+        {
+    
         }
         public tele(string p, string m)
         {
@@ -31,41 +34,29 @@ namespace TELECOMANDO
             produttori = p;
         }
 
-        public void Accendi()
+        /*public void Accendi()
         {
             stato = true;
         }
         public void Spegni()
         {
             stato = false;
+        }*/
+        public void AccSpe()
+        {
+            TV.spegniAccendiTV(TV.getStato());
         }
         public void setVolume(string v)
         {
-            volume = 0;
-            if (v == "+")
-            {
-                volume = volume + 1;
-            }
-            else if (v == "-")
-            {
-                volume = volume - 1;
-            }
-            if (volume < 0)
-            {
-                volume = 0;
-            }
-            if (volume > 100)
-            {
-                volume = 100;
-            }
+            TV.setVolume(v);
         }
         public void setCanale(int c)
         {
-            canale = c;
+            TV.setCanale(c);
         }
-        public int getVolume()
+        public int  getVolume()
         {
-            return volume;
+            return TV.getVolume();
         }
     }
 }

@@ -42,6 +42,7 @@
             this.Accensione = new System.Windows.Forms.Button();
             this.pulsantePiu = new System.Windows.Forms.Button();
             this.pulsanteMeno = new System.Windows.Forms.Button();
+            this.channelLAbel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,11 +185,21 @@
             this.pulsanteMeno.TabIndex = 13;
             this.pulsanteMeno.UseVisualStyleBackColor = true;
             // 
+            // channelLAbel
+            // 
+            this.channelLAbel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.channelLAbel.Location = new System.Drawing.Point(237, 112);
+            this.channelLAbel.Name = "channelLAbel";
+            this.channelLAbel.Size = new System.Drawing.Size(85, 37);
+            this.channelLAbel.TabIndex = 14;
+            this.channelLAbel.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.channelLAbel);
             this.Controls.Add(this.pulsanteMeno);
             this.Controls.Add(this.pulsantePiu);
             this.Controls.Add(this.Accensione);
@@ -226,5 +237,6 @@
         private Button Accensione;
         private Button pulsantePiu;
         private Button pulsanteMeno;
+        private Label channelLAbel;
     }
 }
