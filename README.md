@@ -1,1 +1,2 @@
-programma per simulare il funzionamento di un telecomando usando la grafica e le classi
+programma per simulare il funzionamento di un telecomando,televisione ecc... usando la grafica e le classi.
+Il prodotto finale sarà una struttura di domotica
