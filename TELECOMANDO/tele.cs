@@ -34,21 +34,29 @@ namespace TELECOMANDO
             produttori = p;
         }
 
-        /*public void Accendi()
+        public void Accendi()
         {
-            stato = true;
+            
         }
         public void Spegni()
         {
-            stato = false;
-        }*/
-        public void AccSpe()
+            
+        }
+        /*public void AccSpe()
         {
             TV.spegniAccendiTV(TV.getStato());
-        }
-        public void setVolume(string v)
+        }*/
+        /*public void setVolume(string v)
         {
             TV.setVolume(v);
+        }*/
+        public void alzaVolume()
+        {
+            TV.alzaVolume();
+        }
+        public void abbassaVolume()
+        {
+            TV.abbassaVolume();
         }
         public void setCanale(int c)
         {

@@ -16,6 +16,8 @@ namespace TELECOMANDO
             private int canale = 0;
             private bool stato = false;
 
+            private float prezzo;
+
             public Television(string Serie, string pro, int ris, string[] p)
             {
                 NumeroDiSerie = Serie;
@@ -67,8 +69,21 @@ namespace TELECOMANDO
             {
                 NumeroDiSerie = Serie;
             }
+            
+            public float Prezzo
+            {
+                get
+                {
+                   return prezzo;
+                }
+                set
+                {
+                  prezzo = value;
+                }
 
-            public void setVolume(string vol)
+            }
+
+            /*public void setVolume(string vol)
             {
                 if (vol == "+")
                 {
@@ -86,15 +101,23 @@ namespace TELECOMANDO
                 {
                     volume = 100;
                 }
+            }*/
+            public void alzaVolume()
+            {
+                volume = volume + 1;
+            }
+            public void abbassaVolume()
+            {
+                volume = volume - 1;
             }
             public int getVolume()
             {
                 return volume;
             }
-            public void spegniAccendiTV(bool state)
+            /*public void spegniAccendiTV(bool state)
             {
                state = !stato; 
-            }
+            }*/
             public bool getStato()
             {
                return stato;
