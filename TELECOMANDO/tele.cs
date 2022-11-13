@@ -16,31 +16,48 @@ namespace TELECOMANDO
 
         public tele(string p, string m, string oM,Television T)
         {
-            produttori = p;
-            modello = m;
-            operationMode = oM;
-        }
-        public tele( Television T)
-        {
-    
+            setProduttore(p);
+            setModello(m);
+            setOperationMode(oM);
+            setTV(T);
         }
         public tele(string p, string m)
         {
-            produttori = p;
-            modello = m;
+            setProduttore(p);
+            setModello(m);
         }
         public tele(string p)
         {
-            produttori = p;
+            setProduttore(p);
+        }
+        private void setProduttore(string pro)
+        {
+            produttori = pro;
+        }
+        private void setModello(string mo)
+        {
+            modello = mo;
+        }
+        private void setOperationMode(string ope)
+        {
+            operationMode=ope;
+        }
+        private void setTV(Television tv)
+        {
+            TV = tv;
         }
 
         public void Accendi()
         {
-            
+            TV.accendi();
         }
         public void Spegni()
         {
-            
+            TV.spegni();
+        }
+        public void getStato()
+        {
+            TV.getStato();
         }
         /*public void AccSpe()
         {
@@ -61,6 +78,10 @@ namespace TELECOMANDO
         public void setCanale(int c)
         {
             TV.setCanale(c);
+        }
+        public void getCanale()
+        {
+            TV.getCanale();
         }
         public int  getVolume()
         {

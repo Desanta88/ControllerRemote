@@ -20,57 +20,73 @@ namespace TELECOMANDO
 
             public Television(string Serie, string pro, int ris, string[] p)
             {
-                NumeroDiSerie = Serie;
-                produttore = pro;
-                risoluzione = ris;
-                connettori = p;
+                setSerie(Serie);
+                setProduttore(pro);
+                setRisoluzione(ris);
+                setConnettori(p);
             }
             public Television(string Serie, string pro, int ris)
             {
-                NumeroDiSerie = Serie;
-                produttore = pro;
-                risoluzione = ris;
+                setSerie(Serie);
+                setProduttore(pro);
+                setRisoluzione(ris);
             }
             public Television(string Serie, int ris, string[] p)
             {
-                NumeroDiSerie = Serie;
-                risoluzione = ris;
-                connettori = p;
+                setSerie(Serie);
+                setRisoluzione(ris);
+                setConnettori(p);
             }
             public Television(string Serie, string pro)
             {
-                NumeroDiSerie = Serie;
-                produttore = pro;
+                setSerie(Serie);
+                setProduttore(pro);
             }
             public Television(string Serie, int ris)
             {
-                NumeroDiSerie = Serie;
-                risoluzione = ris;
+                setSerie(Serie);
+                setRisoluzione(ris);
             }
             public Television(int ris, string[] p)
             {
-                risoluzione = ris;
-                connettori = p;
+                setRisoluzione(ris);
+                setConnettori(p);
             }
             public Television(string Serie, string[] p)
             {
-                NumeroDiSerie = Serie;
-                connettori = p;
+                setSerie(Serie);
+                setConnettori(p);
             }
             public Television(string[] p)
             {
-                connettori = p;
+               setConnettori(p);
             }
             public Television(int ris)
             {
-                risoluzione = ris;
+               setRisoluzione(ris);
             }
             public Television(string Serie)
             {
-                NumeroDiSerie = Serie;
+               setSerie(Serie);
             }
-            
-            public float Prezzo
+            private void setSerie(string se)
+            {
+                NumeroDiSerie = se;
+            }
+            private void setProduttore(string p)
+            {
+                produttore = p;
+            }
+            private void setRisoluzione(int r)
+            {
+               risoluzione = r;
+            }
+            private void setConnettori(string[] c)
+            {
+               connettori = c;
+            }
+
+        public float Prezzo
             {
                 get
                 {
@@ -104,11 +120,17 @@ namespace TELECOMANDO
             }*/
             public void alzaVolume()
             {
-                volume = volume + 1;
+                if(volume>=100)
+                  volume = 100;
+                else
+                  volume = volume + 1;
             }
             public void abbassaVolume()
             {
-                volume = volume - 1;
+                if (volume <= 0)
+                  volume = 0;
+                else
+                  volume = volume - 1;
             }
             public int getVolume()
             {
@@ -122,10 +144,22 @@ namespace TELECOMANDO
             {
                return stato;
             }
+            public int getCanale()
+            {
+               return canale;
+            }
             public void setCanale(int channel)
             {
                canale = channel;
             }
+            public void accendi()
+            {
+               stato = true;
+            }
+            public void spegni()
+            {
+               stato = false;
+            }
 
-        }
+    }
     }

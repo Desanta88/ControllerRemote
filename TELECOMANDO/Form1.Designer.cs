@@ -43,6 +43,7 @@
             this.pulsantePiu = new System.Windows.Forms.Button();
             this.pulsanteMeno = new System.Windows.Forms.Button();
             this.channelLAbel = new System.Windows.Forms.Label();
+            this.labelVolume = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             this.pulsante1.Size = new System.Drawing.Size(37, 37);
             this.pulsante1.TabIndex = 1;
             this.pulsante1.UseVisualStyleBackColor = true;
+            this.pulsante1.Click += new System.EventHandler(this.pulsante1_Click);
             // 
             // pulsante2
             // 
@@ -74,6 +76,7 @@
             this.pulsante2.Size = new System.Drawing.Size(37, 37);
             this.pulsante2.TabIndex = 2;
             this.pulsante2.UseVisualStyleBackColor = true;
+            this.pulsante2.Click += new System.EventHandler(this.pulsante2_Click);
             // 
             // pulsante3
             // 
@@ -84,6 +87,7 @@
             this.pulsante3.Size = new System.Drawing.Size(37, 37);
             this.pulsante3.TabIndex = 3;
             this.pulsante3.UseVisualStyleBackColor = true;
+            this.pulsante3.Click += new System.EventHandler(this.pulsante3_Click);
             // 
             // pulsante4
             // 
@@ -94,6 +98,7 @@
             this.pulsante4.Size = new System.Drawing.Size(37, 37);
             this.pulsante4.TabIndex = 4;
             this.pulsante4.UseVisualStyleBackColor = true;
+            this.pulsante4.Click += new System.EventHandler(this.pulsante4_Click);
             // 
             // pulsante5
             // 
@@ -104,6 +109,7 @@
             this.pulsante5.Size = new System.Drawing.Size(37, 37);
             this.pulsante5.TabIndex = 5;
             this.pulsante5.UseVisualStyleBackColor = true;
+            this.pulsante5.Click += new System.EventHandler(this.pulsante5_Click);
             // 
             // button6
             // 
@@ -114,6 +120,7 @@
             this.button6.Size = new System.Drawing.Size(37, 37);
             this.button6.TabIndex = 6;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pulsante7
             // 
@@ -124,6 +131,7 @@
             this.pulsante7.Size = new System.Drawing.Size(37, 37);
             this.pulsante7.TabIndex = 7;
             this.pulsante7.UseVisualStyleBackColor = true;
+            this.pulsante7.Click += new System.EventHandler(this.pulsante7_Click);
             // 
             // pulsante8
             // 
@@ -134,6 +142,7 @@
             this.pulsante8.Size = new System.Drawing.Size(37, 37);
             this.pulsante8.TabIndex = 8;
             this.pulsante8.UseVisualStyleBackColor = true;
+            this.pulsante8.Click += new System.EventHandler(this.pulsante8_Click);
             // 
             // pulsante9
             // 
@@ -144,6 +153,7 @@
             this.pulsante9.Size = new System.Drawing.Size(37, 37);
             this.pulsante9.TabIndex = 9;
             this.pulsante9.UseVisualStyleBackColor = true;
+            this.pulsante9.Click += new System.EventHandler(this.pulsante9_Click);
             // 
             // pulsante0
             // 
@@ -154,6 +164,7 @@
             this.pulsante0.Size = new System.Drawing.Size(37, 37);
             this.pulsante0.TabIndex = 10;
             this.pulsante0.UseVisualStyleBackColor = true;
+            this.pulsante0.Click += new System.EventHandler(this.pulsante0_Click);
             // 
             // Accensione
             // 
@@ -174,6 +185,7 @@
             this.pulsantePiu.Size = new System.Drawing.Size(37, 37);
             this.pulsantePiu.TabIndex = 12;
             this.pulsantePiu.UseVisualStyleBackColor = true;
+            this.pulsantePiu.Click += new System.EventHandler(this.pulsantePiu_Click);
             // 
             // pulsanteMeno
             // 
@@ -184,21 +196,33 @@
             this.pulsanteMeno.Size = new System.Drawing.Size(37, 37);
             this.pulsanteMeno.TabIndex = 13;
             this.pulsanteMeno.UseVisualStyleBackColor = true;
+            this.pulsanteMeno.Click += new System.EventHandler(this.pulsanteMeno_Click);
             // 
             // channelLAbel
             // 
             this.channelLAbel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.channelLAbel.Location = new System.Drawing.Point(237, 112);
+            this.channelLAbel.Location = new System.Drawing.Point(657, 199);
             this.channelLAbel.Name = "channelLAbel";
             this.channelLAbel.Size = new System.Drawing.Size(85, 37);
             this.channelLAbel.TabIndex = 14;
             this.channelLAbel.Text = "label1";
+            // 
+            // labelVolume
+            // 
+            this.labelVolume.AutoSize = true;
+            this.labelVolume.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelVolume.Location = new System.Drawing.Point(660, 112);
+            this.labelVolume.Name = "labelVolume";
+            this.labelVolume.Size = new System.Drawing.Size(82, 31);
+            this.labelVolume.TabIndex = 15;
+            this.labelVolume.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelVolume);
             this.Controls.Add(this.channelLAbel);
             this.Controls.Add(this.pulsanteMeno);
             this.Controls.Add(this.pulsantePiu);
@@ -218,6 +242,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,5 +263,6 @@
         private Button pulsantePiu;
         private Button pulsanteMeno;
         private Label channelLAbel;
+        private Label labelVolume;
     }
 }
